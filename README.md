@@ -25,6 +25,7 @@ Performed with `healthcare_dataset_cleaning.sql`:
 * Removed duplicates and irrelevant columns
 * Ensured billing amounts are non-null
 
+View SQL Cleaning Script
 
 ## 📊 KPIs Tracked
 
