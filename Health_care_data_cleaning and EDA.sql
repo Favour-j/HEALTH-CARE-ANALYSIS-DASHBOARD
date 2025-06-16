@@ -99,7 +99,7 @@ GROUP BY
   END;
 
 
----- load cleam data imtp powerBI
+---- load clean data into powerBI
 
 SELECT 
     [Patient_ID],
