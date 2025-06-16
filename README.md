@@ -12,7 +12,7 @@ This project analyzes a healthcare dataset to identify key trends in patient con
 
 ## 📊 Dataset Overview
 
-* **Source**: \[Specify source if available or note if synthetic]
+* **Source**: Synthetic
 * **Format**: Excel (`Healthcare Dataset.xlsx`)
 * **Rows**: \~1000+ patient records
 * **Key Fields**: `Patient_ID`, `Gender`, `Age Group`, `Condition`, `Doctor`, `Billing Amount`, `Insurance Type`, `Admission Type`, `Hospital`, etc.
@@ -50,7 +50,7 @@ Performed with `healthcare_dataset_cleaning.sql`:
 
 ## 👁️ Dashboard Preview
 
-![Dashboard Screenshot](./assets/dashboard.png)
+![Dashboard PDF](/dashboard/healthcare_dashboard.pdf)
 
 ### Download / View
 
@@ -69,24 +69,9 @@ HEALTH-CARE-ANALYSIS-DASHBOARD/
 ├── dashboard/
 │   ├── healthcare_dashboard.pbix
 │   └── healthcare_dashboard.pdf
-├── assets/
-│   └── dashboard.png
+
 ```
 
-## 🚀 Future Improvements
-
-* Add drill-downs and bookmarks for deeper interactivity
-* Integrate DAX formulas in README or separate doc
-* Include SQL comments and data validation checks
-* Host live dashboard using Power BI Service
-* Add data dictionary for more transparency
-
-## 📅 Project Timeline
-
-* **Raw Data Inspection**: Excel (Day 1)
-* **SQL Cleaning & Transformation**: (Day 2)
-* **Dashboard Development**: Power BI (Day 3-4)
-* **Insights & Documentation**: (Day 5)
 
 ---
 
