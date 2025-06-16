@@ -1,0 +1,19 @@
+TotalPatients = DISTINCTCOUNT('HealthcareData'[Patient ID])
+
+BillingTotal = SUM('HealthcareData'[Billing Amount])
+
+AvgBillingPerPatient = 
+    DIVIDE([BillingTotal], [TotalPatients])
+
+LengthOfStay = 
+    DATEDIFF('HealthcareData'[Date of Admission], 'HealthcareData'[Discharge Date], DAY)
+
+Age Group = 
+    SWITCH(
+        TRUE(),
+        'HealthcareData'[Age] <= 20, "0–20",
+        'HealthcareData'[Age] <= 40, "21–40",
+        'HealthcareData'[Age] <= 60, "41–60",
+        'HealthcareData'[Age] <= 80, "61–80",
+        "81+"
+    )
