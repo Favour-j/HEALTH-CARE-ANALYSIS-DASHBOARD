@@ -23,7 +23,7 @@ To design a Power BI dashboard that enables stakeholders to:
 
 Here’s a snapshot of the interactive Power BI dashboard built for this project:
 
-![Dashboard Preview](health.png)
+![Dashboard Preview](health.PNG)
 
 *This dashboard visualizes patterns in doctor activity, patient demographics, insurance billing, and more.*
 
