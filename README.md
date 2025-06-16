@@ -73,9 +73,7 @@ HEALTH-CARE-ANALYSIS-DASHBOARD/
 
 ```
 
-
-##🧠 Business Insight Summary
-
+## 🧠 Business Insight Summary
 
 This Power BI dashboard reveals critical insights across hospital operations, patient demographics, and financial trends. Below are key findings grouped by category:
 
