@@ -1,3 +1,8 @@
+
+--  View data preview
+-- SELECT TOP 100 * FROM HealthcareData;
+
+
 --- Removing potential duplicates based on Patient ID and Admission Date
 
 WITH Ranked AS (
@@ -76,19 +81,43 @@ GROUP BY [Hospital];
 -- Age distribution
 SELECT 
   CASE 
-    WHEN Age BETWEEN 0 AND 20 THEN '0–20'
-    WHEN Age BETWEEN 21 AND 40 THEN '21–40'
-    WHEN Age BETWEEN 41 AND 60 THEN '41–60'
-    WHEN Age BETWEEN 61 AND 80 THEN '61–80'
+    WHEN Age BETWEEN 0 AND 20 THEN '0â€“20'
+    WHEN Age BETWEEN 21 AND 40 THEN '21â€“40'
+    WHEN Age BETWEEN 41 AND 60 THEN '41â€“60'
+    WHEN Age BETWEEN 61 AND 80 THEN '61â€“80'
     ELSE '81+' 
   END AS AgeGroup,
   COUNT(*) AS TotalPatients
 FROM HealthcareData
 GROUP BY 
   CASE 
-    WHEN Age BETWEEN 0 AND 20 THEN '0–20'
-    WHEN Age BETWEEN 21 AND 40 THEN '21–40'
-    WHEN Age BETWEEN 41 AND 60 THEN '41–60'
-    WHEN Age BETWEEN 61 AND 80 THEN '61–80'
+    WHEN Age BETWEEN 0 AND 20 THEN '0â€“20'
+    WHEN Age BETWEEN 21 AND 40 THEN '21â€“40'
+    WHEN Age BETWEEN 41 AND 60 THEN '41â€“60'
+    WHEN Age BETWEEN 61 AND 80 THEN '61â€“80'
     ELSE '81+' 
   END;
+
+
+---- load cleam data imtp powerBI
+
+SELECT 
+    [Patient_ID],
+    [Age],
+    [Gender],
+    [Blood_Type],
+    [Medical_Condition],
+    [Date_of_Admission],
+    [Discharge_Date],
+    DATEDIFF(DAY, [Date_of_Admission], [Discharge_Date]) AS LengthOfStay,
+    [Doctor],
+    [Hospital],
+    [Insurance_Provider],
+    [Billing_Amount],
+    [Room_Number],
+    [Admission_Type],
+    [Medication],
+    [Test_Results],
+    [Hospital_Latitude],
+    [Hospital_Longitude]
+FROM HealthcareData;
